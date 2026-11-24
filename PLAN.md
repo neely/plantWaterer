@@ -10,7 +10,7 @@ Live at **not deployed yet** · Repo: **github.com/neely/plantwaterer**
 ## Status
 - **Active:** Phase 2 — Plant list page
 - **Last updated:** 2026-11-24
-- **Next action:** Answer the three open questions at the top of Phase 2. Then build the plant list page.
+- **Next action:** Get Ben's approval of the build plan in the handoff below. Then do build step 1.
 
 ---
 
@@ -31,15 +31,20 @@ Live at **not deployed yet** · Repo: **github.com/neely/plantwaterer**
 
 ## Phase 2 — Plant list page  ← ACTIVE
 Open questions (answer before code):
-- [ ] Where is the plant data stored? Option A: a JSON file in this repo, edited through the GitHub API (same as other personal apps). Option B: Cloudflare KV. Record the choice in FINDINGS.
-- [ ] What web address? Proposal: plantwaterer.benneely.com. Confirm with Ben.
-- [ ] How does the page stop strangers from editing my plants? Pick a simple method (for example, a secret key kept in the browser).
+- [x] Where is the plant data stored? Answer: data/plants.json in this repo. See FINDINGS.
+- [x] What web address? Answer: plantwaterer.benneely.com. See FINDINGS.
+- [x] How does the page stop strangers from editing my plants? Answer: Cloudflare Access login, Ben's email only. See FINDINGS.
 
 Build:
+- [ ] Remove the word "tripwires" from the Files list in AGENTS.md. The Tripwires block was deleted at setup.
+- [ ] Verify in current Cloudflare docs: how to stop a Pages rebuild when only data/plants.json changes. Quote the docs.
+- [ ] Verify in current Cloudflare docs: how Access treats a link opened from an email (needed for Phase 4). Quote the docs.
 - [ ] Define the plant record: name, location (optional), water every N days, last watered date, notes (optional).
 - [ ] Page lists all plants. Plants due today or overdue show first.
 - [ ] Add, edit, and remove a plant from the page.
 - [ ] A "Watered today" button sets the last watered date to today.
+- [ ] Save API: functions/api/plants.js reads and writes data/plants.json through the GitHub API. The GitHub token is a Cloudflare secret.
+- [ ] Cloudflare setup: Pages project from this repo, plantwaterer.benneely.com, Access policy for Ben's email only, GitHub token secret, no rebuild on data-only changes. Try the Cloudflare connector first. Else give Ben click-by-click steps.
 - [ ] Deploy to Cloudflare Pages. Open it on Ben's iPhone and confirm it works.
 
 ## Phase 3 — Daily email reminder
@@ -65,6 +70,9 @@ Build:
 
 ## Handoff → next session
 Start prompt:
-> Read AGENTS.md and PLAN.md. Then help me answer the three open questions in
-> Phase 2, record the answers in FINDINGS.md, and start building the plant
-> list page. Explain choices in plain words; I am not a trained programmer.
+> Read AGENTS.md, PLAN.md, and FINDINGS.md "Decisions". The three Phase 2
+> questions are answered. Show Ben the Phase 2 build list in plain words and
+> get his approval before you edit files. Then build it in order, with small
+> commits. Ask Ben for a few real plants and their watering intervals to use
+> as starting data. Explain choices in plain words; Ben is not a trained
+> programmer. Watch out: each "Watered today" press makes a git commit.

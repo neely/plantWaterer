@@ -42,6 +42,22 @@ Choices made, and why. Mark settled ones `(locked)`.
 - Why: This matches Ben's other personal apps, so the patterns and accounts already exist.
 - Rejected: Native iPhone app (needs an Apple developer account and App Store work). Not locked: Ben accepted it, but he has not reviewed the details.
 
+### Plant data in a JSON file in this repo
+- What: The plant list is data/plants.json in this repo. A Pages Function reads and writes it through the GitHub API.
+- Why: Ben chose this on 2026-11-24. It matches his other apps. Git history shows every change.
+- Cost: Each save (for example, "Watered today") makes a commit on main. Plant commits and code commits mix in one history. If this becomes a problem, move the data to a separate repo.
+- Rejected: Cloudflare KV (faster, but the data is not in the repo).
+
+### Web address: plantwaterer.benneely.com (locked)
+- What: The site uses plantwaterer.benneely.com.
+- Why: Ben chose this on 2026-11-24. It matches the repo name and his other benneely.com apps.
+- Rejected: plants.benneely.com.
+
+### Cloudflare Access login, Ben's email only (locked)
+- What: Cloudflare Access protects the site. Only Ben's email can sign in, with a one-time code.
+- Why: Ben chose this on 2026-11-24. The app needs no password code. Ben's creel app uses the same method (this is from agent memory; check the creel repo if it matters).
+- Rejected: A secret key stored in the browser (anyone with the key gets in). Family logins (not needed now; add emails to the Access policy later if wanted).
+
 ### Personal repo, small commits
 - What: Repo lives at github.com/neely/plantwaterer. Commits use benaneely@gmail.com. Frequent small commits straight to main. Debriefs go in JOURNAL.md.
 - Why: Hobby project. Keeps work and personal history separate.
