@@ -1,4 +1,4 @@
-# <Project> — Journal
+# plantWaterer — Journal
 
 Newest entry on top. Entries are never edited — this is history, not current
 state. One entry per session: the shutdown debrief.
@@ -8,21 +8,14 @@ journal/YYYY-MM.md (the month they were written, newest first).
 
 ---
 
-## YYYY-MM-DD — <session in a few words>
+## 2026-11-24 — Kickoff from template
 
-**Did:** <one or two lines>
+**Did:** Made the repo from agent-context-kit v5 (GitHub copy; the NIST GitLab copy was not reachable). Ran first-run setup. Wrote README, PLAN phases, and first FINDINGS. No app code.
 
 **Least confident about (Q1):**
-- <thing> — would be proven right/wrong by <test/observation>.
+- Plant data storage (GitHub JSON or Cloudflare KV) — will be proven by a working "Watered today" button that saves and reloads correctly.
+- Email sending method — will be proven by a real reminder email in Ben's inbox.
 
-**Suggested improvement (Q5):** <one line>
+**Suggested improvement (Q5):** Explain each technical choice in plain words before asking Ben to pick.
 
-<!-- For big sessions, also include: -->
-**Unstated assumptions (Q2):** <...>
-**Biggest thing being missed (Q3):** <...>
-**Could've gone better (Q4):** <...>
-
----
-
-## YYYY-MM-DD — <previous session>
-...
+**Unstated assumptions (Q2):** The plants are mostly houseplants on fixed schedules. One user only.
