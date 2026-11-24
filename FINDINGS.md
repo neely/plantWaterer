@@ -43,6 +43,6 @@ Choices made, and why. Mark settled ones `(locked)`.
 - Rejected: Native iPhone app (needs an Apple developer account and App Store work). Not locked: Ben accepted it, but he has not reviewed the details.
 
 ### Personal repo, small commits
-- What: Repo lives at github.com/neely/plantWaterer. Commits use benaneely@gmail.com. Frequent small commits straight to main. Debriefs go in JOURNAL.md.
+- What: Repo lives at github.com/neely/plantwaterer. Commits use benaneely@gmail.com. Frequent small commits straight to main. Debriefs go in JOURNAL.md.
 - Why: Hobby project. Keeps work and personal history separate.
 - Rejected: NIST GitLab (not a work project). Batched commits and GitHub-issue journal (Ben chose the simpler defaults).

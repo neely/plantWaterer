@@ -1,6 +1,6 @@
 # plantWaterer — Roadmap
 
-Live at **not deployed yet** · Repo: **github.com/neely/plantWaterer**
+Live at **not deployed yet** · Repo: **github.com/neely/plantwaterer**
 
 **Purpose:** Remind me when each plant needs water, based on a per-plant schedule.
 **Non-goals:** Not a plant-identification tool. Not a plant-care encyclopedia.
